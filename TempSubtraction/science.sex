@@ -1,0 +1,37 @@
+# Simple configuration file for SExtractor prior to PSFEx use
+# only non-default parameters are present.
+# EB 2007-08-01
+#
+#-------------------------------- Catalog ------------------------------------
+ 
+CATALOG_NAME     prepsfex.cat   # Catalog filename
+CATALOG_TYPE     ASCII_HEAD      # FITS_LDAC format
+PARAMETERS_NAME  science.param # name of the file containing catalog contents
+ 
+#------------------------------- Extraction ----------------------------------
+ 
+DETECT_MINAREA   6              # minimum number of pixels above threshold
+DETECT_THRESH    10              # a fairly conservative threshold
+ANALYSIS_THRESH  5              # idem
+ 
+FILTER           Y              # apply filter for detection ("Y" or "N")?
+FILTER_NAME      default.conv   # name of the file containing the filter
+ 
+#-------------------------------- WEIGHTing ----------------------------------
+#-------------------------------- FLAGging -----------------------------------
+#------------------------------ Photometry -----------------------------------
+ 
+PHOT_APERTURES   15             # <- put the referrence aperture diameter here
+SATUR_LEVEL      50000.0        # <- put the right saturation threshold here
+GAIN             1.6            # <- put the detector gain in e-/ADU here
+PIXEL_SCALE      0.6765         # <- put the pixel scale here
+#------------------------- Star/Galaxy Separation ---------------------------- 
+#------------------------------ Background -----------------------------------
+#------------------------------ Check Image ----------------------------------
+#--------------------- Memory (change with caution!) -------------------------
+#------------------------------- ASSOCiation ---------------------------------
+#----------------------------- Miscellaneous ---------------------------------
+VERBOSE_TYPE	QUIET
+NTHREADS        1               # Number of simultaneous threads for
+                                # the SMP version of SExtractor
+                                # 0 = automatic
